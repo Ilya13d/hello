@@ -1,14 +1,15 @@
-<!doctype html>
-<html>
-    <head>
-        <title>
-            Hello
-        </title>
-    </head>
-    <body>
-        <form action="/greet" method="get">
-            <input type="text" name="name" placeholder="name"
-            autofocus autocomplete="off">
-            <button type="submit">Greet</button>
-        </form>
-{% endblock %}
+{% extends 'layout.html' %}
+{% block body %}
+<img src="/static/gerbtspu118.png">
+<form action="/submit" method="post">
+    <input autofocus name="fname" type="text">
+    <input name="lname" type="text">
+    <select name="house">
+        <option disabled selected>House</option>
+        <option value="Gryffindor">Gryffindor</option>
+        <option value="Slytherin">Slytherin</option>
+        <option value="Hufflepuff">Hufflepuff</option>
+        <option value="Ravenclaw">Ravenclaw</option>
+    </select>
+
+</form>
